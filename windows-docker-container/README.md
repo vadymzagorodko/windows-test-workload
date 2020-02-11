@@ -8,4 +8,4 @@ definition which can be used to run a Windows Docker Container on a DC/OS mixed 
 - Install Marathon-LB from DC/OS service catalogue and you will have the ability to access the app using http://<linuxpublicagentipaddress>
 - Specify in the `windows-docker-app.json` file the `HAPROXY_0_VHOST` which is the public dns name of the public agent
 - Update in the `windows-docker-app.json` file the `constraints` which is the region like `windows-us-west-2`.
-- Install the `windows-docker-app.json` filetemplate to run the Windows Dcoker container
+- Install the `windows-docker-app.json` filetemplate to run the Windows Docker container
