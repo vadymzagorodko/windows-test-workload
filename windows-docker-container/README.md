@@ -5,7 +5,12 @@ definition which can be used to run a Windows Docker Container on a DC/OS mixed 
 
 ### Steps to run the example workload
 
-- Install Marathon-LB from DC/OS service catalogue and you will have the ability to access the app using http://<linuxpublicagentipaddress>
-- Specify in the `windows-docker-app.json` file the `HAPROXY_0_VHOST` which is the public dns name of the public agent
-- Update in the `windows-docker-app.json` file the `constraints` which is the region like `windows-us-west-2`.
-- Install the `windows-docker-app.json` filetemplate to run the Windows Docker container
+- Install Marathon-LB from DC/OS service catalogue and you will have the ability to access the app using `http://<linuxpublicagentipaddress>`
+- Modify in the `windows-docker-app.json` file:
+   - the label `HAPROXY_0_VHOST` which must be the public dns name of the public agent
+   - the `constraints` which must be set to the region of the windows node (like `windows-us-west-2`).
+- Deploy the Jenkins app defined in `windows-docker-app.json`
+   ```
+   dcos marathon app add windows-docker-app.json
+   ```
+
