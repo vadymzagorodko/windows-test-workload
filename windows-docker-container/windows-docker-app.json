@@ -15,11 +15,6 @@
       "os",
       "LIKE",
       "windows"
-    ],
-    [
-      "@region",
-      "IS",
-      "windows-your-region"
     ]
   ],
   "container": {
